@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -106,4 +107,35 @@ fun ContactDetails(contact: Contact) {
         }
 
     }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+private fun ContactDetailsPreviewFavorite() {
+    ContactDetails(
+        contact = Contact(
+            name = "Иван",
+            surname = "Иванович",
+            familyName = "Петров",
+            isFavorite = true,
+            phone = "+7 978 85 58 222",
+            address = "Москва, ул. Ленина, д. 10",
+            email = "robert.houghwout.jackson@examplepetstore.com"
+        )
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ContactDetailsPreviewWithPhoto() {
+    ContactDetails(
+        contact = Contact(
+            name = "Ольга",
+            familyName = "Парашютова",
+            imageRes = R.drawable.avatar,
+            phone = "+7 978 85 58 222",
+            address = "Санкт-Петербург, ул. Вернадского, д. 5"
+        )
+    )
 }

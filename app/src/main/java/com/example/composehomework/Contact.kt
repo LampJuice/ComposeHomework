@@ -1,5 +1,8 @@
 package com.example.composehomework
 
+import androidx.compose.runtime.Immutable
+
+@Immutable
 data class Contact(
     val name: String, //Имя
     val surname: String? = null, //Отчество
